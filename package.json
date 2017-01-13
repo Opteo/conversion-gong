@@ -9,7 +9,8 @@
   "author": "LouisBluhm <suspiciouspotato@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "python-shell": "^0.4.0"
+    "python-shell": "^0.4.0",
+    "mysql" : "latest"
   },
   "description": "",
   "bugs": {

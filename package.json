@@ -1,0 +1,23 @@
+{
+  "name": "gong",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Opteo/gong.git"
+  },
+  "author": "LouisBluhm <suspiciouspotato@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "python-shell": "^0.4.0"
+  },
+  "description": "",
+  "bugs": {
+    "url": "https://github.com/Opteo/gong/issues"
+  },
+  "homepage": "https://github.com/Opteo/gong#readme",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

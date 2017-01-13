@@ -12,7 +12,7 @@ def main():
 	GPIO.setup(24, GPIO.OUT)
 	GPIO.output(23, True)
 	GPIO.output(24, True)
-	time.sleep(5)
+	time.sleep(0.2)
 	GPIO.output(23, False)
 	GPIO.output(24, False)
 

@@ -19,7 +19,7 @@ setInterval(function() {
 
 	connection.query('SELECT count(*) as count from common.users', function(err, rows, fields) {
 	  if (err) {
-	  	console.log(err)``
+	  	console.log(err)
 	  }
 
 	  var new_conversions = rows[0].count

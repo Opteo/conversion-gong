@@ -27,7 +27,7 @@ setInterval(function() {
 			conversions = new_conversions
 			console.log('new conversion found!')
 			console.log('running python')
-			PythonShell.run('led.py', {scriptPath: '/home/pi/Desktop/conversion-gong'}, function(err) {
+			PythonShell.run('led.py', {scriptPath: '/home/pi/conversion-gong'}, function(err) {
 				if(err) {
 					console.log(err)
 				} else {

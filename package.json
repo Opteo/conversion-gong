@@ -10,7 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "python-shell": "^0.4.0",
-    "mysql" : "latest"
+    "request" : "latest"
   },
   "description": "",
   "bugs": {

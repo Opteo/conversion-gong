@@ -1,27 +1,18 @@
-//var Promise = require('bluebird')
-// var Adwords = require('node-adwords').AdwordsUser
-// var AdwordsConstants = require('node-adwords').AdwordsConstants
-// var AdwordsReport = require('node-adwords').AdwordsReport
 var PythonShell = require('python-shell')
-var mysql = require('mysql')
-
-// var report = new AdwordsReport({
-	
-// })
+var request = require('request')
 
 var conversions = 0
 
 setInterval(function() {
-	var mysql      = require('mysql');
-	var connection = mysql.createConnection(require('./config').db.rds);
-
-	connection.connect();
-
-	connection.query('SELECT count(*) as count from common.users', function(err, rows, fields) {
-	  if (err) {
+	request.get('https://staging-api.opteo.com/render/gongcount', { timeout: 1500 }, function(
+            err,
+            bod1,
+            count
+        ) {
+          if (err) {
 	  	console.log(err)
 	  } else {
-	  	var new_conversions = rows[0].count
+		 var new_conversions = +count
 		console.log('conversions: ', new_conversions)
 		if(new_conversions > conversions) {
 			conversions = new_conversions
@@ -34,11 +25,10 @@ setInterval(function() {
 					console.log('finished script')	
 				}
 			})
-		}
+		} 
 	  }
-	});
-
-	connection.end();
+        })
+	
 }, 5000)
 
 
